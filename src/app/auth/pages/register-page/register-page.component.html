@@ -1,0 +1,35 @@
+<div class="flex flex-column">
+    <span class="text-lg mb-4">Crear cuenta</span>
+
+    <mat-form-field>
+        <mat-label>
+            Usuario
+        </mat-label>
+        <input type="text" matInput placeholder="Nombre de usuario">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>
+            Contraseña
+        </mat-label>
+        <input type="password" matInput placeholder="Contraseña">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>
+            Confirmar contraseña
+        </mat-label>
+        <input type="password" matInput placeholder="Confirmar contraseñas">
+    </mat-form-field>
+
+    <button mat-button mat-flat-button routerLink="/auth/login">
+        <mat-icon>login</mat-icon>
+        Ingresar
+    </button>
+
+    <div class="flex justify-content-end mt-5">
+        <a routerLink="/auth/login">¿Ya tienes una cuenta? Inicia Sesión</a>
+    </div>
+
+
+</div>
