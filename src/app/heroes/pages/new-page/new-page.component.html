@@ -1,1 +1,51 @@
-<p>new-page works!</p>
+<div class="login-page">
+    <mat-card>
+      <div class="card-layout">
+        <div class="form-container">
+          <mat-card-header>
+            <mat-card-title>Registrar</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <!-- Inicio del Stepper -->
+            <mat-stepper [linear]="isLinear" #stepper>
+              <mat-step [stepControl]="firstFormGroup">
+                <ng-template matStepLabel>Edit Hero</ng-template>
+                <form [formGroup]="firstFormGroup" class="form-grid">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Superhero</mat-label>
+                    <input matInput formControlName="firstName" required>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Alter Ego</mat-label>
+                    <input matInput formControlName="lastName" required>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>First Appearence</mat-label>
+                    <input matInput formControlName="lastName" required>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Characters</mat-label>
+                    <input matInput formControlName="lastName" required>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Publisher</mat-label>
+                    <input matInput formControlName="lastName" required>
+                  </mat-form-field>
+                  <button mat-button matStepperNext>Siguiente</button>
+                </form>
+              </mat-step>
+              <mat-step>
+                <p>Mostrar Nombre</p>
+                <div>
+                    <button mat-button (click)="finish()">Finalizar</button>
+                    <button mat-button matStepperPrevious>Regresar</button>
+                </div>
+              </mat-step>
+            </mat-stepper>
+            <!-- Fin del Stepper -->
+          </mat-card-content>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  

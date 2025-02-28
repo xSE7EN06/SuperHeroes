@@ -1,1 +1,20 @@
-<p>hero-page works!</p>
+<mat-card class="custom-card">
+  <mat-card-header>
+    <div class="header-container">
+      <mat-card-title>{{ hero?.superhero }}</mat-card-title>
+      <mat-card-subtitle>{{ hero?.publisher }}</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+
+  <div class="image-container">
+    <img mat-card-image [src]="hero?.image_url" [alt]="hero?.superhero" class="hero-image" />
+  </div>
+
+  <mat-card-content class="content-container">
+    <p><strong>Primera aparición:</strong> {{ hero?.first_appearance }}</p>
+    <p><strong>Nombre:</strong> {{ hero?.alter_ego }}</p>
+  </mat-card-content>
+  <button mat-button mat-raised color="accent" [routerLink]="['/heroes/list']">
+    Rgeresar
+  </button>
+</mat-card>
